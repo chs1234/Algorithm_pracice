@@ -1,0 +1,27 @@
+package algo;
+
+public class Question {
+
+	
+	public void question1() {
+		System.out.println("=================문제 1==================");
+		System.out.println("Hello World를 출력하시오.");
+		System.out.println("Hello World!");
+	}
+
+	public void question2() {
+		System.out.println("=================문제 2==================");
+		System.out.println("두 줄에 걸쳐 \"강한친구 대한육군\"을 한 줄에 한 번씩 출력한다.");
+		System.out.println("강한친구 대한육군");
+		System.out.println("강한친구 대한육군");
+	}
+
+	public void question3() {
+		System.out.println("=================문제 3==================");
+		System.out.println("고양이를 출력하시오");
+		System.out.println("\\    /\\\r\n"
+				+ " )  ( ')\r\n"
+				+ "(  /  )\r\n"
+				+ " \\(__)|");
+	}
+}
