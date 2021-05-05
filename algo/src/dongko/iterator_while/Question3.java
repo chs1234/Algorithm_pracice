@@ -20,19 +20,18 @@ public class Question3 {
 		
 		try {
 			String n = br.readLine();
-			String originNum = (parse(n) < 10)?("0" + n):n;
+			String originNum = (is1Digit(n))?("0" + n):n;
 			String newNum = "";
 			int cnt = 0;
 			while(!originNum.equals(newNum)) {
 				cnt ++;
 				String digit1 = "", digit10 = "";
 				
-				digit10 = (n.length() > 1)?(n.substring(0, 1)):("0");
-				digit1 = n.substring(n.length() -1);
+				digit10 = (is1Digit(n))?("0"):(firstChar(n));
+				digit1 = lastChar(n);
 				
 				int digitSum = parse(digit10) + parse(digit1);
-				String digitSumLastChar = (digitSum + "").substring((digitSum + "").length() -1);
-				newNum = digit1 + digitSumLastChar;
+				newNum = digit1 + lastChar(digitSum + "");
 				n = newNum;
 			}
 			
@@ -46,5 +45,23 @@ public class Question3 {
 	
 	public static int parse(String str) {
 		return Integer.parseInt(str);
+	}
+	public static String lastChar(String str) {
+		return str.substring(str.length() - 1);
+	}
+	public static String firstChar(String str) {
+		return str.substring(0, 1);
+	}
+	public static boolean is1Digit(Object param) {
+		boolean result = true;
+		
+		if( param instanceof String 
+				&& !(((String) param).length() < 2)) {
+			result = false;
+		} else if( param instanceof Integer 
+				&& (Integer)param >= 10) {
+			result = false;
+		}
+		return result;
 	}
 }
