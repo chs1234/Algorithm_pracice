@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 
 
 public class Question11 {
@@ -20,10 +19,6 @@ public class Question11 {
 			int X = parse(nx.split(" ")[1]);
 			
 			String [] arrStr = br.readLine().split(" ");
-//			int nArr[] = new int[arrStr.length];
-//			for(int i = 0; i < arrStr.length; i ++) {
-//				nArr[i] = parse(arrStr[i]);
-//			}
 			
 			for(String str : arrStr) {
 				if(parse(str) < X) bw.write(str + " ");
