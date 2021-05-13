@@ -37,8 +37,10 @@ public class Question3 {
 			
 			for(int j = 1; j < iStr.length(); j++) {
 				if((Integer.parseInt(iStr.charAt(j-1) + "") 
-						- Integer.parseInt(iStr.charAt(j) + "")) != d) 
+						- Integer.parseInt(iStr.charAt(j) + "")) != d) {
 					isHansu = false;
+					break;
+				}
 			}
 			
 			if(isHansu) cnt ++;
