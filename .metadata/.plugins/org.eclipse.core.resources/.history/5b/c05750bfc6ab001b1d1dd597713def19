@@ -1,9 +1,0 @@
-package algo;
-
-public class Question {
-
-	
-	private void question1() {
-		
-	}
-}

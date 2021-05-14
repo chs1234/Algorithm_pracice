@@ -1,9 +1,0 @@
-package algo;
-
-public class Algo {
-
-	public static void main(String args[]) {
-		Question q = new Question();
-		q.question1();
-	}
-}
