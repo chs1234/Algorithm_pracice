@@ -14,18 +14,24 @@ public class Question2 {
 
 	public static void main(String[] args) {
 		
-		for(int i = 2; i < 100; i++) {
-//			System.out.println(i + " // " + (i / 6) + "  // " + (i % 6));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			int n = Integer.parseInt(br.readLine());
+			int cnt = 0;
+			int point = 0;
+			
+			for(int i = 2; i <= n; i++) {
+				if((i ==2) 
+					|| i == (point + cnt * 6)) {
+					cnt++;
+					point = i;
+				}
+			}
+			
+			System.out.println(cnt + 1);
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		int sum = 0;
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		try {
-//			int n = Integer.parseInt(br.readLine());
-//			int cnt = (n / 6) + 1;
-//			System.out.println(cnt);
-//			br.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
 	}
 }
