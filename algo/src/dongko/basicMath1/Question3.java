@@ -29,42 +29,45 @@ public class Question3 {
 			int rowP = 1, colP = 1;
 			boolean asc = false;
 			while(cnt < 100) {
+				System.out.println();
+				System.out.println("row : " + row);
+				System.out.println("col : " + col);
 				rowP = row;
 				colP = col;
-				if(col == 1) {
-					
-					//내려가야 하는 경우 
-					if(rowP == 1) {
-						colP = col;
-						row++;
-						col--;
-						asc = false;
-					//옆으로가야 하는 경우
-					} else {
-						row--;
-						col++;
-					}
-				}
+//				if(col == 1) {
+//					
+//					//내려가야 하는 경우 
+//					if(rowP == 1) {
+//						colP = col;
+//						row++;
+//						col--;
+//						asc = false;
+//					//옆으로가야 하는 경우
+//					} else {
+//						row--;
+//						col++;
+//					}
+//				}
+//				
+//				if(row == 1) {
+//					
+//					//내려가야 하는 경우
+//					if(colP > col) {
+//						rowP = row;
+//						row++;
+//					//대각선 올라가야 하는 경우
+//					} else {
+//						rowP = row;
+//						colP = col;
+//						row--;
+//						col++;
+//						asc = true;
+//					}
+//					
+//				}
 				
-				if(row == 1) {
-					
-					//내려가야 하는 경우
-					if(colP > col) {
-						rowP = row;
-						row++;
-					//대각선 올라가야 하는 경우
-					} else {
-						rowP = row;
-						colP = col;
-						row--;
-						col++;
-						asc = true;
-					}
-					
-				}
 				
-				
-				if((row != 1) & (col != 1)) {
+				if((row != 1) && (col != 1)) {
 					if(asc) {
 						row--;
 						col++;
@@ -72,9 +75,40 @@ public class Question3 {
 						row++;
 						col--;
 					}
+				} else {
+					if(col == 1) {
+						
+						//내려가야 하는 경우 
+						if(rowP == 1) {
+							colP = col;
+							row++;
+							col--;
+							asc = false;
+						//옆으로가야 하는 경우
+						} else {
+							row--;
+							col++;
+						}
+					}
+					
+					if(row == 1) {
+						
+						//내려가야 하는 경우
+						if(colP > col) {
+							rowP = row;
+							row++;
+						//대각선 올라가야 하는 경우
+						} else {
+							rowP = row;
+							colP = col;
+							row--;
+							col++;
+							asc = true;
+						}
+						
+					}
 				}
 				cnt++;
-				
 				System.out.print(row + "/" + col + " " + cnt);
 				if(col == 99) System.out.println();
 			}
