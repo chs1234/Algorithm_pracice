@@ -1,4 +1,4 @@
-package src.seung.array;
+package seung.array;
 
 import java.util.*;
 
