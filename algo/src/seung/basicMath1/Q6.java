@@ -33,8 +33,8 @@ public class Q6 {
 			APT[0][i] = i; 
 		}
  
-		for (int i = 1; i < 15; i++) { // 1층부터 14층까지
-			for (int j = 2; j < 15; j++) { // 2호부터 14호까지
+		for (int i = 1; i < 15; i++) { 
+			for (int j = 2; j < 15; j++) { 
 				APT[i][j] = APT[i][j - 1] + APT[i - 1][j];
 			}
 		}
