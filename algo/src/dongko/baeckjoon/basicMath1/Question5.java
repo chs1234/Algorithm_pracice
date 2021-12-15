@@ -1,4 +1,4 @@
-package dongko.basicMath1;
+package dongko.baeckjoon.basicMath1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-/*ACM 호텔 */
+/*ACM �샇�뀛 */
 public class Question5 {
 
 	public static void main(String[] args) {

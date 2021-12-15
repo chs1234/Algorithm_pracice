@@ -1,7 +1,7 @@
 package dongko.programmers.level1;
 
 /**
- * @title ·Î¶ÇÀÇ ÃÖ°í ¼øÀ§¿Í ÃÖÀú ¼øÀ§
+ * @title ë¡œë˜ì˜ ìµœê³  ìˆœìœ„ì™€ ìµœì € ìˆœìœ„
  * @author dhkim
  * @date 2021. 12. 15. 
  * @link https://programmers.co.kr/learn/courses/30/lessons/77484
@@ -16,14 +16,14 @@ public class Lotto {
         int minRank = getRankByCnt(cnt);
         
         if(true == isZeroContained) {
-            //0Æ÷ÇÔ
+            //0ï¿½ï¿½ï¿½ï¿½
             int zeroCnt = getZeroCnt(lottos);
             int maxRank = getRankByCnt(cnt + zeroCnt);
             
             answer[0] = maxRank;
             answer[1] = minRank;
         } else {
-            //0¹ÌÆ÷ÇÔ
+            //0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             answer[0] = minRank;
             answer[1] = minRank;
         }

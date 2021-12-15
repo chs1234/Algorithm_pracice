@@ -2,14 +2,14 @@ package dongko.programmers.level1;
 
 
 /**
- * @title ¿ÏÁÖÇÏÁö ¸øÇÑ ¼±¼ö
+ * @title ì™„ì£¼í•˜ì§€ ëª»í•œ ì„ ìˆ˜
  * @author dhkim
  * @date 2021. 12. 15.
  * @link https://programmers.co.kr/learn/courses/30/lessons/42576
  */
 public class Marathon {
 	
-	//javascript·Î Ç®¾ú½À´Ï´Ù
+	//javascriptï¿½ï¿½ Ç®ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
 //	function solution(participant, completion) {
 //	    
 //	    var answer = "";

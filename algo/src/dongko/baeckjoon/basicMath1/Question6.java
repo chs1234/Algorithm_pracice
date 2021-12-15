@@ -1,4 +1,4 @@
-package dongko.basicMath1;
+package dongko.baeckjoon.basicMath1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-/*부녀회장이 될테야 */
+/*遺����쉶�옣�씠 �맆�뀒�빞 */
 public class Question6 {
 
 	public static void main(String[] args) {
