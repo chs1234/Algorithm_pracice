@@ -1,0 +1,118 @@
+package openApi;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+public class Test {
+
+//	public static void main(String[] args) throws IOException {
+//        StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1130000/MllInfoService/getMllSttemntInfo"); /*URL*/
+//        urlBuilder.append("?" + URLEncoder.encode("ServiceKey","UTF-8") + "=qmZ1eXuacini8rm5AzU1GAW5jlLwg0cm%2Br8VJ1akWFj%2FjK3wIuvQfvwVLEMwGN9A1wCnlJeiUINxkJ2PUNuTCg%3D%3D"); /*Service Key*/
+//        urlBuilder.append("&" + URLEncoder.encode("fromPermYmd","UTF-8") + "=" + URLEncoder.encode("20210503", "UTF-8")); /*시도명*/
+//        urlBuilder.append("&" + URLEncoder.encode("toPermYmd","UTF-8") + "=" + URLEncoder.encode("20210503", "UTF-8")); /*시군구명*/
+//        URL url = new URL(urlBuilder.toString());
+//        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//        conn.setRequestMethod("GET");
+//        conn.setRequestProperty("Content-type", "application/json");
+//        System.out.println("Response code: " + conn.getResponseCode());
+//        BufferedReader rd;
+//        if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
+//            rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//        } else {
+//            rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+//        }
+//        StringBuilder sb = new StringBuilder();
+//        String line;
+//        while ((line = rd.readLine()) != null) {
+//            sb.append(line);
+//        }
+//        rd.close();
+//        conn.disconnect();
+//        System.out.println(sb.toString());
+//    }
+	
+	public static void main(String[] args) throws Exception {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+		Document document = documentBuilder.parse("data.xml");
+		
+		document.getDocumentElement().normalize();
+		
+		// root 구하기
+		Element root = document.getDocumentElement();
+		
+		// root의 속성
+		System.out.println("class name: " + root.getNodeName());
+		NodeList nodeList = document.getElementsByTagName("item");
+		System.out.println(nodeList.getLength());
+		
+		for(int i = 0; i < nodeList.getLength(); i++) {
+			Node node = nodeList.item(i);
+			
+			
+			NodeList list = node.getChildNodes();
+			for(int j = 0; j < list.getLength(); j++) {
+				Node item = list.item(j);
+				Element ele = (Element) item;
+				System.out.println(ele);
+				System.out.println(item.getNodeName());
+				System.out.println(item.getNodeType());
+				System.out.println(item.getNodeValue());
+			}
+		}
+//		
+//		NodeList childeren = root.getChildNodes(); // 자식 노드 목록 get
+//		for(int i = 0; i < childeren.getLength(); i++){
+//			Node node = childeren.item(i);
+//			if(node.getNodeType() == Node.ELEMENT_NODE){ // 해당 노드의 종류 판정(Element일 때)
+//				Element ele = (Element)node;
+//				String nodeName = ele.getNodeName();
+////				System.out.println("node name: " + nodeName);
+//				if(nodeName.equals("items")){
+////					System.out.println("node attribute: " + ele.getAttribute("name"));
+//				}
+//				else if(nodeName.equals("body")){
+//					// 이름이 student인 노드는 자식노드가 더 존재함
+//					NodeList childeren2 = ele.getChildNodes();
+//					System.out.println("child : " + childeren2.getLength());
+//					for(int a = 0; a < childeren2.getLength(); a++){
+//						Node node2 = childeren2.item(a);
+//						
+//						System.out.println(node2.getNodeName());
+//						if(node2.getNodeName().equals("items")) {
+//							NodeList items = node2.getChildNodes();
+//							
+//							for(int k = 0; k < items.getLength(); k++) {
+//								Node item = items.item(k);
+////								System.out.println(item.getNodeName());
+//								
+//								NodeList fields = item.getChildNodes();
+//								 
+//								for(int j = 0; j < fields.getLength(); j++) {
+//									System.out.println(fields.item(j) + " : " + fields.item(j).getNodeValue());
+//								}
+//							}
+//						}
+////						if(node2.getNodeType() == Node.ELEMENT_NODE){
+////							Element ele2 = (Element)node2;
+////							String nodeName2 = ele2.getNodeName();
+////							System.out.println("node name2: " + nodeName2);
+////							System.out.println("node attribute2: " + ele2.getAttribute("num"));
+////						}
+//					}
+//				}
+//			}
+//		}
+	}
+
+}

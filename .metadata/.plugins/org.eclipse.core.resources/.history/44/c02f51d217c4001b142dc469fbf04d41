@@ -1,0 +1,23 @@
+package openApi;
+
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class InTest {
+
+	public static void main(String[] args) {
+		String searchUrl = "https://search.shopping.naver.com/search/all?query=%EA%B8%B0%EA%B3%84%EC%8B%9D+%ED%82%A4%EB%B3%B4%EB%93%9C&cat_id=&frm=NVSHATC";
+		try {
+			Document doc = Jsoup.connect(searchUrl).get();
+			
+			double totSize = Double.parseDouble(doc.getElementsByClass("_productSet_total").get(0).text().replaceAll("[^0-9]", "").trim());
+			System.out.println(totSize);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

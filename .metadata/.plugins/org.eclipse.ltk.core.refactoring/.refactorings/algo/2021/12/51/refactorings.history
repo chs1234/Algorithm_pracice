@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;array, basicMath1, conditional, function, ioCalc, iterator, iterator_while, string&apos; to &apos;baeckjoon&apos;" description="Move 8 resources to &apos;baeckjoon&apos;" destination="src/dongko/baeckjoon" element1="src/dongko/array" element2="src/dongko/basicMath1" element3="src/dongko/conditional" element4="src/dongko/function" element5="src/dongko/ioCalc" element6="src/dongko/iterator" element7="src/dongko/iterator_while" element8="src/dongko/string" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1639556434028" updateReferences="true"/>
+</session>
