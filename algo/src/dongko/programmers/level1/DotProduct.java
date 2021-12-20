@@ -1,10 +1,10 @@
 package dongko.programmers.level1;
 
 /**
- * @title
+ * @title ³»Àû
  * @author dhkim
  * @date 2021. 12. 20.
- * @link
+ * @link https://programmers.co.kr/learn/courses/30/lessons/70128
  */
 public class DotProduct {
 
