@@ -5,6 +5,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * @title 모의고사 
+ * @author dhkim
+ * @date 2021. 12. 21.
+ * @link https://programmers.co.kr/learn/courses/30/lessons/42840
+ */
 public class MockExam {
 
 	class Solution {
