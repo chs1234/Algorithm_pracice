@@ -1,5 +1,6 @@
 package dongko.programmers.level1;
 
+import java.util.HashMap;
 
 /**
  * @title 완주하지 못한 선수
@@ -9,23 +10,27 @@ package dongko.programmers.level1;
  */
 public class Marathon {
 	
-	//javascript�� Ǯ�����ϴ�
-//	function solution(participant, completion) {
-//	    
-//	    var answer = "";
-//	    
-//	    participant.sort();
-//	    completion.sort();
-//	    
-//	    for(var i = participant.length-1; i >= 0; i--) {
-//	      if(participant[participant.length-1] == completion[completion.length-1]) {
-//	          completion.pop();
-//	          participant.pop();
-//	      } else{
-//	          break;
-//	      }
-//	    }
-//	    return participant[participant.length -1];
-//	}
+	class Solution {
+	    public String solution(String[] participant, String[] completion) {
+	        HashMap<String, Integer> map = new HashMap<> ();
+	        for(String p : participant) {
+	            if(map.get(p) == null) map.put(p, 0);
+	            map.put(p, map.get(p) + 1);
+	        }
+	        
+	        for(String c : completion) {
+	            map.put(c, map.get(c) -1);
+	        }
+	        
+	        String answer = "";
+	        for(String key : map.keySet()) {
+	            if(map.get(key) == 1) {
+	                answer = key;
+	                break;
+	            }
+	        }
+	        return answer;
+	    }
+	}
 
 }
